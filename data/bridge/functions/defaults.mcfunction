@@ -6,6 +6,12 @@ gamerule doImmediateRespawn true
 gamerule keepInventory true
 gamerule fallDamage false
 
+# team sides
+## red
+scoreboard players set side_red internal 1
+## blue
+scoreboard players set side_blue internal -1
+
 # triggers
 scoreboard objectives add start trigger 
 
