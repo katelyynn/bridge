@@ -1,11 +1,11 @@
-# DS main loop
+# BRIDGE main loop
 
 
 # track positions
 function bridge:track/pos
 
 # time loop
-execute if score period internal matches 0..1 run function bridge:time
+execute if score period internal matches 0..2 run function bridge:time
 
 # kill checks
 execute if score period internal matches 1 as @a[scores={kill=1..}] at @s run function bridge:track/kill

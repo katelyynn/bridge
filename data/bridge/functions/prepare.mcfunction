@@ -5,6 +5,7 @@
 scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
 scoreboard objectives add kill playerKillCount
+scoreboard objectives add points dummy
 # track positions
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy

@@ -1,17 +1,15 @@
-# BRIDGE start
-## starts the game after the 5s countdown
-## period: 0 -> 1
+# BRIDGE continue game
+## runs after countdown (when scored point)
 
 
 # reset time
 function fm:clock/reset
-
-# remove tags
-tag @a remove win
-scoreboard players reset @a kill
+# pickup time where it left off
+scoreboard players operation time_s internal = time_s_temp internal
+scoreboard players reset time_s_temp internal
 
 # announce
-tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Let the games begin!","color":"yellow"}]
+tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Continue!","color":"yellow"}]
 # sfx
 execute as @a at @s run playsound entity.generic.explode player @s ~ ~ ~
 execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~
