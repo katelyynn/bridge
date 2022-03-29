@@ -5,6 +5,11 @@
 scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
 scoreboard objectives add kill playerKillCount
+# track lifetime
+scoreboard objectives add lifetime_kills playerKillCount
+scoreboard objectives add lifetime_deaths deathCount
+scoreboard objectives add lifetime_melee minecraft.used:minecraft.iron_sword
+scoreboard objectives add lifetime_ranged minecraft.used:minecraft.bow
 
 # teams
 ## red
