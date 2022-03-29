@@ -16,6 +16,7 @@ fill -30 104 -1 -32 106 1 air
 
 # world
 gamemode adventure @a[team=!spec]
+effect clear @a
 # teleport
 ## red
 tp @a[team=red] 31 104 0
