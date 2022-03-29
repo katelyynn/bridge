@@ -3,6 +3,10 @@
 ## period: (-1) -> 0
 
 
+# reset time
+function fm:clock/reset
+scoreboard players set countdown internal 5
+
 # clear game end schedule
 schedule clear bridge:game/end
 
