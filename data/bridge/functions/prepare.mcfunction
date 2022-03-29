@@ -5,6 +5,10 @@
 scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
 scoreboard objectives add kill playerKillCount
+# track positions
+scoreboard objectives add x dummy
+scoreboard objectives add y dummy
+scoreboard objectives add z dummy
 # track lifetime
 scoreboard objectives add lifetime_kills playerKillCount
 scoreboard objectives add lifetime_deaths deathCount
