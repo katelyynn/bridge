@@ -7,11 +7,14 @@ scoreboard players set period internal 3
 gamemode spectator @a[tag=!win]
 
 # announce
-title @a subtitle ["",{"selector":"@a[tag=win]","color":"yellow","bold":true},{"text":" won!","color":"yellow"}]
+execute if entity @a[tag=win] run title @a subtitle ["",{"selector":"@a[tag=win]","color":"yellow","bold":true},{"text":" won!","color":"yellow"}]
 ## red
 execute if entity @a[tag=win,limit=1,team=red] run title @a title {"text":"GAME OVER!","color":"red","bold":true}
 ## blue
 execute if entity @a[tag=win,limit=1,team=blue] run title @a title {"text":"GAME OVER!","color":"blue","bold":true}
+## draw
+execute unless entity @a[tag=win] run title @a title {"text":"GAME OVER!","color":"gold","bold":true}
+execute unless entity @a[tag=win] run title @a subtitle ["",{"text":"It was a tie..","color":"yellow"}]
 
 # sfx
 execute as @a at @s run playsound ui.toast.challenge_complete player @s ~ ~ ~
