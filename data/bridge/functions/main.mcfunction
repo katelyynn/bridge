@@ -1,6 +1,11 @@
 # DS main loop
 
 
+# track positions
+execute as @a at @s store result score @s x run data get entity @s Pos[0]
+execute as @a at @s store result score @s y run data get entity @s Pos[1]
+execute as @a at @s store result score @s z run data get entity @s Pos[2]
+
 # time loop
 execute if score period internal matches 0..1 run function bridge:time
 
