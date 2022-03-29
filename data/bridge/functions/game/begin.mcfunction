@@ -3,6 +3,9 @@
 ## period: 0 -> 1
 
 
+# reset time
+function fm:clock/reset
+
 # remove tags
 tag @a remove win
 scoreboard players reset @a kill
