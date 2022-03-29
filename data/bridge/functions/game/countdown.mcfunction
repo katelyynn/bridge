@@ -8,7 +8,7 @@ schedule clear bridge:game/end
 
 # build spawn platforms
 ## red
-fill 29 103 -2 33 107 2 blue_stained_glass
+fill 29 103 -2 33 107 2 red_stained_glass
 fill 30 104 -1 32 106 1 air
 ## blue
 fill -29 103 -2 -33 107 2 blue_stained_glass
