@@ -12,6 +12,23 @@ scoreboard players set side_red internal 1
 ## blue
 scoreboard players set side_blue internal -1
 
+# portal positions
+## global
+#  y
+scoreboard players set portal_y internal 89
+scoreboard players set portal_y2 internal 91
+#  z
+scoreboard players set portal_z internal -2
+scoreboard players set portal_z2 internal 2
+## red
+#  x
+scoreboard players set portal_red_x internal 31
+scoreboard players set portal_red_x2 internal 35
+## blue
+#  x
+scoreboard players set portal_red_x internal -31
+scoreboard players set portal_red_x2 internal -35
+
 # triggers
 scoreboard objectives add start trigger 
 

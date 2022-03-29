@@ -10,6 +10,8 @@ scoreboard objectives add x dummy
 scoreboard objectives add y dummy
 scoreboard objectives add z dummy
 scoreboard objectives add team_side dummy
+scoreboard objectives add in_red_portal dummy
+scoreboard objectives add in_blue_portal dummy
 # track lifetime
 scoreboard objectives add lifetime_kills playerKillCount
 scoreboard objectives add lifetime_deaths deathCount
