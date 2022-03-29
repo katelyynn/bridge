@@ -5,4 +5,5 @@
 
 # world
 scoreboard players set period internal -1
+effect clear @a
 gamemode spectator @a
