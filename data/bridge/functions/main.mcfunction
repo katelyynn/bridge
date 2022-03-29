@@ -12,6 +12,9 @@ execute unless score period internal matches 1 run scoreboard players reset @a k
 execute if score period internal matches 1 as @a if score @s points >= win_points global run tag @s add win
 execute if score period internal matches 1 as @a if score @s points >= win_points global run function bridge:game/win
 
+# assign triggers
+scoreboard players enable @a start
+
 # periods
 ## -1: game finished
 ## 0: game countdown

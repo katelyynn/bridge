@@ -6,6 +6,9 @@ gamerule doImmediateRespawn true
 gamerule keepInventory true
 gamerule fallDamage false
 
+# triggers
+scoreboard objectives add start trigger 
+
 # win points
 scoreboard players set win_points global 5
 # end on time

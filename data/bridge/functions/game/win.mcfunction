@@ -7,6 +7,7 @@ scoreboard players set period internal 3
 gamemode spectator @a[tag=!win]
 
 # announce
+tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Game over! ","color":"yellow"},{"text":"[Play again]","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Start a new game"}]},"clickEvent":{"action":"run_command","value":"/trigger start"}},{"text":" [Change options]","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"Configure settings (requires op)"}]},"clickEvent":{"action":"run_command","value":"/function bridge:open/options"}}]
 execute if entity @a[tag=win] run title @a subtitle ["",{"selector":"@a[tag=win]","color":"yellow","bold":true},{"text":" won!","color":"yellow"}]
 ## red
 execute if entity @a[tag=win,limit=1,team=red] run title @a title {"text":"GAME OVER!","color":"red","bold":true}
