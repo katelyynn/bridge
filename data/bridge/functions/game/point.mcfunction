@@ -4,7 +4,10 @@
 
 
 # add
-scoreboard players add @s points 1
+## red
+execute if entity @s[team=red] run scoreboard players add red points 1
+## blue
+execute if entity @s[team=red] run scoreboard players add blue points 1
 
 # build spawn platforms
 ## red

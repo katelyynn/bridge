@@ -19,6 +19,14 @@ scoreboard objectives add lifetime_deaths deathCount
 scoreboard objectives add lifetime_melee minecraft.used:minecraft.iron_sword
 scoreboard objectives add lifetime_ranged minecraft.used:minecraft.bow
 
+# bossbar
+## red
+bossbar add bridge:red ""
+bossbar set bridge:red color red
+## blue
+bossbar add bridge:blue ""
+bossbar set bridge:blue color blue
+
 # teams
 ## red
 team add red
