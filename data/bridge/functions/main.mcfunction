@@ -15,4 +15,4 @@ execute if score period internal matches 1 as @a if score @s points >= win_point
 # periods
 ## -1: game finished
 ## 0: game countdown
-## 1: main game (ongoing) 
+## 1: main game (ongoing)
