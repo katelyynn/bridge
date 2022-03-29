@@ -25,6 +25,8 @@ effect give @a resistance 9999 255 true
 execute if entity @a[tag=win,limit=1,team=red] as @a[tag=win] at @s run summon firework_rocket ~ ~1 ~ {FireworksItem:{id:"minecraft:firework_rocket",Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:0,Trail:0,Colors:[I;16257811],FadeColors:[I;16072723]}]}}}}
 ## blue
 execute if entity @a[tag=win,limit=1,team=blue] as @a[tag=win] at @s run summon firework_rocket ~ ~1 ~ {FireworksItem:{id:"minecraft:firework_rocket",Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:0,Trail:0,Colors:[I;1512440],FadeColors:[I;11270517]}]}}}}
+## draw
+execute unless entity @a[tag=win] as @a[team=!spec] at @s run summon firework_rocket ~ ~1 ~ {FireworksItem:{id:"minecraft:firework_rocket",Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:0,Trail:0,Colors:[I;16289043],FadeColors:[I;15909273]}]}}}}
 
 # effects
 effect give @a[tag=win] glowing 9999 255 true
