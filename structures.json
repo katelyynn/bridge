@@ -4,6 +4,7 @@
             "name": "Urban",
             "id": "bridge:maps/urban_red",
             "colour": "red",
+            "time": "day",
             "pos": [
                 {
                     "x": "0",
@@ -16,6 +17,7 @@
             "name": "Urban",
             "id": "bridge:maps/urban_blue",
             "colour": "blue",
+            "time": "day",
             "pos": [
                 {
                     "x": "-33",

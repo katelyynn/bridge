@@ -5,6 +5,10 @@
 gamerule doImmediateRespawn true
 gamerule keepInventory true
 gamerule fallDamage false
+gamerule doMobLoot false
+gamerule doMobSpawning false
+gamerule doDaylightCycle false
+gamerule doWeatherCycle false
 
 # arrow regenerating
 ## if disabled, bows have infinity
