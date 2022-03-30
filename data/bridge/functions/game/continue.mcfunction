@@ -8,6 +8,12 @@ function fm:clock/reset
 scoreboard players operation time_s internal = time_s_temp internal
 scoreboard players reset time_s_temp internal
 
+# reset scores
+scoreboard players reset @a arrow_regen
+scoreboard players reset @a a_time
+scoreboard players reset @a a_time_s
+scoreboard players reset @a arrow
+
 # announce
 tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Continue!","color":"yellow"}]
 # sfx

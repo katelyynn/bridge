@@ -9,6 +9,11 @@ function fm:clock/reset
 # remove tags
 tag @a remove win
 scoreboard players reset @a kill
+# reset scores
+scoreboard players reset @a arrow_regen
+scoreboard players reset @a a_time
+scoreboard players reset @a a_time_s
+scoreboard players reset @a arrow
 
 # announce
 tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Let the games begin!","color":"yellow"}]

@@ -3,6 +3,13 @@
 
 function fm:clock/loop
 
+# arrow timer
+execute as @a[scores={arrow_regen=1..}] run scoreboard players add @s a_time 1
+execute as @a[scores={arrow_regen=1..}] if score @s a_time matches 20.. run scoreboard players add @s a_time_s 1
+execute as @a[scores={arrow_regen=1..}] if score @s a_time matches 20.. run scoreboard players set @s a_time 0
+# upon reaching value
+execute as @a[scores={arrow_regen=1..}] if score @s a_time_s >= arrow_regen_time global run function bridge:track/arrow_finish
+
 # game countdown
 ## 5
 execute if score period internal matches 0 if score time_s internal matches 1 if score time internal matches 0 run function bridge:game/count

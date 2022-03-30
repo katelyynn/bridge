@@ -15,3 +15,5 @@ item replace entity @a[team=!spec,team=blue] hotbar.3 with blue_concrete 64
 item replace entity @a[team=!spec,team=blue] hotbar.4 with blue_concrete 64
 
 item replace entity @a[team=!spec] hotbar.5 with golden_apple 8
+
+item replace entity @a[team=!spec] hotbar.8 with arrow

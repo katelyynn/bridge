@@ -6,6 +6,11 @@ gamerule doImmediateRespawn true
 gamerule keepInventory true
 gamerule fallDamage false
 
+# arrow regenerating
+## if disabled, bows have infinity
+scoreboard players set arrow_regen global 1
+scoreboard players set arrow_regen_time global 3
+
 # team sides
 ## red
 scoreboard players set side_red internal 1
@@ -35,6 +40,7 @@ scoreboard objectives add start trigger
 # win points
 scoreboard players set win_points global 5
 # end on time
+## requires that timer is enabled \/
 scoreboard players set timer global 1
 scoreboard players set timer_amount global 900
 
