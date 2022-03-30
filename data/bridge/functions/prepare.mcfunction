@@ -7,10 +7,11 @@ scoreboard objectives add internal dummy
 scoreboard objectives add kill playerKillCount
 scoreboard objectives add points dummy
 # arrow regen
-scoreboard objectives add arrow minecraft.used:minecraft.bow
 scoreboard objectives add arrow_regen dummy
 scoreboard objectives add a_time dummy
 scoreboard objectives add a_time_s dummy
+scoreboard objectives add a_left dummy
+scoreboard objectives add a_left_temp dummy
 # track positions
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy

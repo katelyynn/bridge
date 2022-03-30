@@ -3,7 +3,7 @@
 - [ ] integrate with maps
 - [ ] generate bridge
 - [ ] test
-- [ ] regenerate arrows
+- [x] regenerate arrows
 
 ## maps
 

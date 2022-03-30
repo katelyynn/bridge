@@ -19,7 +19,9 @@ execute if score period internal matches 1 as @a if score @s points >= win_point
 scoreboard players enable @a start
 
 # use bow
-execute as @a if score @s arrow matches 1.. run function bridge:track/arrow
+execute as @a[team=!spec] unless entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run function bridge:track/arrow
+# announce
+execute as @a[scores={arrow_regen=1..}] run title @s actionbar ["",{"text":"Your arrow will regenerate in ","color":"yellow"},{"score":{"name":"@s","objective":"a_left"},"color":"gold","bold":true},{"text":" seconds!","color":"yellow"}]
 
 # bossbars
 execute unless score period internal matches 1..3 run bossbar set bridge:red players

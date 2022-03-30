@@ -7,6 +7,3 @@ execute unless entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run scoreboar
 # remove if user gains arrow
 ## (either from script or foreign knockback from the east)
 execute if entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run scoreboard players reset @s arrow_regen
-
-
-scoreboard players reset @s arrow

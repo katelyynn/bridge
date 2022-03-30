@@ -7,6 +7,10 @@ function fm:clock/loop
 execute as @a[scores={arrow_regen=1..}] run scoreboard players add @s a_time 1
 execute as @a[scores={arrow_regen=1..}] if score @s a_time matches 20.. run scoreboard players add @s a_time_s 1
 execute as @a[scores={arrow_regen=1..}] if score @s a_time matches 20.. run scoreboard players set @s a_time 0
+# announce
+execute as @a[scores={arrow_regen=1..}] run scoreboard players operation @s a_left_temp = arrow_regen_time global
+execute as @a[scores={arrow_regen=1..}] run scoreboard players operation @s a_left_temp -= @s a_time_s
+execute as @a[scores={arrow_regen=1..}] run scoreboard players operation @s a_left = @s a_left_temp
 # upon reaching value
 execute as @a[scores={arrow_regen=1..}] if score @s a_time_s >= arrow_regen_time global run function bridge:track/arrow_finish
 
