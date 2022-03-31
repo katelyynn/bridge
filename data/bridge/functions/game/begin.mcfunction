@@ -4,8 +4,8 @@
 
 
 # build map
-function bridge:game/build/bridge
 function bridge:game/build/map
+function bridge:game/build/bridge
 
 # reset time
 function fm:clock/reset
