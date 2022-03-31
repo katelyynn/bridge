@@ -35,8 +35,8 @@ scoreboard players set portal_red_x internal 31
 scoreboard players set portal_red_x2 internal 35
 ## blue
 #  x
-scoreboard players set portal_red_x internal -31
-scoreboard players set portal_red_x2 internal -35
+scoreboard players set portal_blue_x internal -31
+scoreboard players set portal_blue_x2 internal -35
 
 # triggers
 scoreboard objectives add start trigger 
