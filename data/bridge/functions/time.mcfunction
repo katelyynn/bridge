@@ -26,18 +26,18 @@ execute if score period internal matches 2 if score time_s internal matches 2 if
 ## 3
 execute if score period internal matches 0 if score time_s internal matches 3 if score time internal matches 0 run scoreboard players remove countdown internal 1
 execute if score period internal matches 0 if score time_s internal matches 3 if score time internal matches 0 run function bridge:game/count
-execute if score period internal matches 2 if score time_s internal matches 2 if score time internal matches 0 run scoreboard players remove countdown internal 1
-execute if score period internal matches 2 if score time_s internal matches 2 if score time internal matches 0 run function bridge:game/count
+execute if score period internal matches 2 if score time_s internal matches 3 if score time internal matches 0 run scoreboard players remove countdown internal 1
+execute if score period internal matches 2 if score time_s internal matches 3 if score time internal matches 0 run function bridge:game/count
 ## 2
 execute if score period internal matches 0 if score time_s internal matches 4 if score time internal matches 0 run scoreboard players remove countdown internal 1
 execute if score period internal matches 0 if score time_s internal matches 4 if score time internal matches 0 run function bridge:game/count
-execute if score period internal matches 2 if score time_s internal matches 2 if score time internal matches 0 run scoreboard players remove countdown internal 1
-execute if score period internal matches 2 if score time_s internal matches 2 if score time internal matches 0 run function bridge:game/count
+execute if score period internal matches 2 if score time_s internal matches 4 if score time internal matches 0 run scoreboard players remove countdown internal 1
+execute if score period internal matches 2 if score time_s internal matches 4 if score time internal matches 0 run function bridge:game/count
 ## 1
 execute if score period internal matches 0 if score time_s internal matches 5 if score time internal matches 0 run scoreboard players remove countdown internal 1
 execute if score period internal matches 0 if score time_s internal matches 5 if score time internal matches 0 run function bridge:game/count
-execute if score period internal matches 2 if score time_s internal matches 2 if score time internal matches 0 run scoreboard players remove countdown internal 1
-execute if score period internal matches 2 if score time_s internal matches 2 if score time internal matches 0 run function bridge:game/count
+execute if score period internal matches 2 if score time_s internal matches 5 if score time internal matches 0 run scoreboard players remove countdown internal 1
+execute if score period internal matches 2 if score time_s internal matches 5 if score time internal matches 0 run function bridge:game/count
 ## 0 (start)
 execute if score period internal matches 0 if score time_s internal matches 6 if score time internal matches 0 run function bridge:game/begin
 execute if score period internal matches 2 if score time_s internal matches 6 if score time internal matches 0 run function bridge:game/continue
