@@ -21,6 +21,7 @@ execute if score period internal matches 1 as @a if score blue points >= win_poi
 
 # assign triggers
 scoreboard players enable @a start
+execute as @a if score @s start matches 1.. run function bridge:trigger/start
 
 # track deaths
 execute if score period internal matches 1 as @a if score @s death matches 1.. run function bridge:track/death
