@@ -28,11 +28,11 @@ execute if score period internal matches 1 as @a if score @s death matches 1.. r
 execute unless score period internal matches 1 as @a if score @s death matches 1.. run scoreboard players reset @s death
 
 # use bow
-execute if score arrow_regen global matches 1.. as @a[team=!spec] unless entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run function bridge:track/arrow
+execute if score period internal matches 1..2 if score arrow_regen global matches 1.. as @a[team=!spec] unless entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run function bridge:track/arrow
 # announce
-execute if score arrow_regen global matches 1.. as @a[scores={arrow_regen=1..}] run title @s actionbar ["",{"text":"Your arrow will regenerate in ","color":"yellow"},{"score":{"name":"@s","objective":"a_left"},"color":"gold","bold":true},{"text":" seconds!","color":"yellow"}]
-# if arrow_regen is off
-execute unless score arrow_regen global matches 1.. as @a[team=!spec] unless entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run item replace entity @s hotbar.8 with arrow
+execute if score period internal matches 1..2 if score arrow_regen global matches 1.. as @a[scores={arrow_regen=1..}] run title @s actionbar ["",{"text":"Your arrow will regenerate in ","color":"yellow"},{"score":{"name":"@s","objective":"a_left"},"color":"gold","bold":true},{"text":" seconds!","color":"yellow"}]
+# if arrow_ if score period internal matches 1..2regen is off
+execute if score period internal matches 1..2 unless score arrow_regen global matches 1.. as @a[team=!spec] unless entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run item replace entity @s hotbar.8 with arrow
 
 # bossbars
 execute unless score period internal matches 1..3 run bossbar set bridge:red players
