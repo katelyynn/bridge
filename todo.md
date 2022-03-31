@@ -2,7 +2,8 @@
 
 - [x] integrate with maps
 - [x] generate bridge
-- [ ] test
+- [x] test
+- [ ] mark spawnpoint
 - [x] regenerate arrows
 - [ ] give bows infinity if `arrow_regen` is disabled
 
