@@ -3,6 +3,10 @@
 ## period: (-1) -> 0
 
 
+# build map
+function bridge:game/build/map
+function bridge:game/build/bridge
+
 # reset time
 function fm:clock/reset
 scoreboard players set countdown internal 5
