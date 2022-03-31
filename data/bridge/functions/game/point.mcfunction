@@ -7,7 +7,7 @@
 ## red
 execute if entity @s[team=red] run scoreboard players add red points 1
 ## blue
-execute if entity @s[team=red] run scoreboard players add blue points 1
+execute if entity @s[team=blue] run scoreboard players add blue points 1
 
 # build spawn platforms
 ## red
@@ -39,3 +39,6 @@ execute as @a at @s run playsound entity.arrow.hit_player player @s
 scoreboard players operation time_s_temp internal = time_s internal
 # reset time
 function fm:clock/reset
+# reset scores
+scoreboard players reset @a in_blue_portal
+scoreboard players reset @a in_red_portal
