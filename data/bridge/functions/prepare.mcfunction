@@ -4,6 +4,7 @@
 # scoreboards
 scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
+scoreboard objectives add death deathCount
 scoreboard objectives add kill playerKillCount
 scoreboard objectives add points dummy
 # arrow regen

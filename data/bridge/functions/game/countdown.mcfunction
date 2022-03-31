@@ -15,6 +15,9 @@ scoreboard players set countdown internal 5
 scoreboard players set @a[team=!spec] points 0
 scoreboard players reset @a[team=spec] points
 
+# reset kit
+execute as @a run function bridge:reset/kit
+
 # clear game end schedule
 schedule clear bridge:game/end
 
@@ -29,7 +32,6 @@ fill -30 104 -1 -32 106 1 air
 # world
 gamemode adventure @a[team=!spec]
 effect clear @a
-function bridge:reset/kit
 # teleport
 ## red
 tp @a[team=red] 31 104 0

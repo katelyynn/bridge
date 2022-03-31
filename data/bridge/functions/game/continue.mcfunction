@@ -14,6 +14,9 @@ scoreboard players reset @a a_time
 scoreboard players reset @a a_time_s
 scoreboard players reset @a arrow
 
+# reset kit
+execute as @a run function bridge:reset/kit
+
 # announce
 tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Continue!","color":"yellow"}]
 # sfx

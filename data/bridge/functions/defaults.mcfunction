@@ -3,7 +3,6 @@
 
 # world
 gamerule doImmediateRespawn true
-gamerule keepInventory true
 gamerule fallDamage false
 gamerule doMobLoot false
 gamerule doMobSpawning false

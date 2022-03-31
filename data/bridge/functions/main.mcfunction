@@ -18,6 +18,10 @@ execute if score period internal matches 1 as @a if score @s points >= win_point
 # assign triggers
 scoreboard players enable @a start
 
+# track deaths
+execute if score period internal matches 1 as @a if score @s death matches 1.. run function bridge:reset/kit
+execute unless score period internal matches 1 as @a if score @s death matches 1.. run scoreboard players reset @s death
+
 # use bow
 execute if score arrow_regen global matches 1.. as @a[team=!spec] unless entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run function bridge:track/arrow
 # announce
