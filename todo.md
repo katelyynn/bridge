@@ -1,7 +1,7 @@
 ## quick todo
 
-- [ ] integrate with maps
-- [ ] generate bridge
+- [x] integrate with maps
+- [x] generate bridge
 - [ ] test
 - [x] regenerate arrows
 - [ ] give bows infinity if `arrow_regen` is disabled
