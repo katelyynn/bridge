@@ -12,8 +12,8 @@ function fm:clock/reset
 scoreboard players set countdown internal 5
 
 # clear points
-scoreboard players set @a[team=!spec] points 0
-scoreboard players reset @a[team=spec] points
+scoreboard players reset red points
+scoreboard players reset blue points
 
 # reset kit
 execute as @a run function bridge:reset/kit
