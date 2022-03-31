@@ -14,6 +14,8 @@
 <br><label class="over">bridge:game/build/map</label>
 <div id="a"></div>
 <hr>
+<br><label class="over">bridge:game/countdown</label>
+<div id="b"></div>
 <script>
     $.get( `structures.json`, function( response ) {
         let data = response;
@@ -27,5 +29,15 @@
             text = (`${text}<br>execute if score map internal matches ${i} run setblock -16 93 0 structure_block{mirror:"NONE",seed:0L,posX:${data.structures[i].pos[1].x},posY:${data.structures[i].pos[1].y},posZ:${data.structures[i].pos[0].z},sizeX:${data.structures[i].size[1].x},sizeY:${data.structures[i].size[1].y},sizeZ:${data.structures[i].size[1].z},name:"${data.structures[i].id}_blue",rotation:"NONE",mode:"LOAD"}`);
         }
         document.getElementById("a").innerHTML = (`${text}`);
+
+        // generate second part
+        let text2 = "";
+        for (let i in data.structures) {
+            // red
+            text2 = (`${text2}<br>execute if score map internal matches ${i} run spawnpoint @a[team=red] ${data.structures[i].spawn[0].x} ${data.structures[i].spawn[0].y} ${data.structures[i].spawn[0].z}`);
+            // blue
+            text2 = (`${text2}<br>execute if score map internal matches ${i} run spawnpoint @a[team=blue] ${data.structures[i].spawn[1].x} ${data.structures[i].spawn[1].y} ${data.structures[i].spawn[1].z}`);
+        }
+        document.getElementById("b").innerHTML = (`${text2}`);
     });
 </script>
