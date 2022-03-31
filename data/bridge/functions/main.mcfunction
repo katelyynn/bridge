@@ -27,6 +27,10 @@ execute as @a if score @s start matches 1.. run function bridge:trigger/start
 execute if score period internal matches 1 as @a if score @s death matches 1.. run function bridge:track/death
 execute unless score period internal matches 1 as @a if score @s death matches 1.. run scoreboard players reset @s death
 
+# pick up items
+execute as @e[type=item] run data merge entity @s {PickupDelay:0s}
+kill @e[type=arrow]
+
 # use bow
 execute if score period internal matches 1..2 if score arrow_regen global matches 1.. as @a[team=!spec] unless entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run function bridge:track/arrow
 # announce
