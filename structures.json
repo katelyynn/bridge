@@ -2,7 +2,7 @@
     "structures": [
         {
             "name": "Urban",
-            "id": "bridge:maps/urban_red",
+            "id": "bridge:maps/urban",
             "colour": "red",
             "time": 0,
             "pos": [

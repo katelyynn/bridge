@@ -21,13 +21,10 @@
         // generate first part
         let text = "";
         for (let i in data.structures) {
-            let pos;
-            if (data.structures[i].colour == 'red') {
-                pos = '16';
-            } else {
-                pos = '-16';
-            }
-            text = (`${text}<br>execute if score map internal matches ${i} run setblock ${pos} 93 0 structure_block{mirror:"NONE",seed:0L,posX:${data.structures[i].pos[0].x},posY:${data.structures[i].pos[0].y},posZ:${data.structures[i].pos[0].z},sizeX:${data.structures[i].size[0].x},sizeY:${data.structures[i].size[0].y},sizeZ:${data.structures[i].size[0].z},name:"${data.structures[i].id}",rotation:"NONE",mode:"LOAD"}`);
+            // red
+            text = (`${text}<br>execute if score map internal matches ${i} run setblock 16 93 0 structure_block{mirror:"NONE",seed:0L,posX:${data.structures[i].pos[0].x},posY:${data.structures[i].pos[0].y},posZ:${data.structures[i].pos[0].z},sizeX:${data.structures[i].size[0].x},sizeY:${data.structures[i].size[0].y},sizeZ:${data.structures[i].size[0].z},name:"${data.structures[i].id}_red",rotation:"NONE",mode:"LOAD"}`);
+            // blue
+            text = (`${text}<br>execute if score map internal matches ${i} run setblock -16 93 0 structure_block{mirror:"NONE",seed:0L,posX:${data.structures[i].pos[1].x},posY:${data.structures[i].pos[1].y},posZ:${data.structures[i].pos[0].z},sizeX:${data.structures[i].size[1].x},sizeY:${data.structures[i].size[1].y},sizeZ:${data.structures[i].size[1].z},name:"${data.structures[i].id}_blue",rotation:"NONE",mode:"LOAD"}`);
         }
         document.getElementById("a").innerHTML = (`${text}`);
     });
