@@ -30,5 +30,5 @@ fill 29 103 -2 33 107 2 air
 fill -29 103 -2 -33 107 2 air
 
 # world
-gamemode survival @a[team=!spec]
+gamemode adventure @a[team=!spec]
 scoreboard players set period internal 1
