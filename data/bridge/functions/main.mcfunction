@@ -13,11 +13,11 @@ execute unless score period internal matches 1 run scoreboard players reset @a k
 
 # win checks
 ## red
-execute if score period internal matches 1 as @a if score red points >= win_points global run tag @a[team=red] add win
-execute if score period internal matches 1 as @a if score red points >= win_points global run function bridge:game/win
+execute if score period internal matches 1 if score red points >= win_points global run tag @a[team=red] add win
+execute if score period internal matches 1 if score red points >= win_points global run function bridge:game/win
 ## blue
-execute if score period internal matches 1 as @a if score blue points >= win_points global run tag @a[team=blue] add win
-execute if score period internal matches 1 as @a if score blue points >= win_points global run function bridge:game/win
+execute if score period internal matches 1 if score blue points >= win_points global run tag @a[team=blue] add win
+execute if score period internal matches 1 if score blue points >= win_points global run function bridge:game/win
 
 # assign triggers
 scoreboard players enable @a start
