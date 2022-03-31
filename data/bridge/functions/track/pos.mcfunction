@@ -16,8 +16,8 @@ execute as @a if score @s x <= side_blue internal run scoreboard players set @s 
 execute as @a if score @s x >= portal_red_x internal if score @s x <= portal_red_x2 internal if score @s z >= portal_z internal if score @s z <= portal_z2 internal if score @s y >= portal_y internal if score @s y <= portal_y2 internal run scoreboard players set @s in_red_portal 1
 execute as @a unless score @s x >= portal_red_x internal unless score @s x <= portal_red_x2 internal unless score @s z >= portal_z internal unless score @s z <= portal_z2 internal unless score @s y >= portal_y internal unless score @s y <= portal_y2 internal run scoreboard players set @s in_red_portal 0
 ## blue
-execute as @a if score @s x >= portal_blue_x internal if score @s x <= portal_blue_x2 internal if score @s z >= portal_z internal if score @s z <= portal_z2 internal if score @s y >= portal_y internal if score @s y <= portal_y2 internal run scoreboard players set @s in_blue_portal 1
-execute as @a unless score @s x >= portal_blue_x internal unless score @s x <= portal_blue_x2 internal unless score @s z >= portal_z internal unless score @s z <= portal_z2 internal unless score @s y >= portal_y internal unless score @s y <= portal_y2 internal run scoreboard players set @s in_blue_portal 0
+execute as @a if score @s x <= portal_blue_x internal if score @s x >= portal_blue_x2 internal if score @s z >= portal_z internal if score @s z <= portal_z2 internal if score @s y >= portal_y internal if score @s y <= portal_y2 internal run scoreboard players set @s in_blue_portal 1
+execute as @a unless score @s x <= portal_blue_x internal unless score @s x >= portal_blue_x2 internal unless score @s z >= portal_z internal unless score @s z <= portal_z2 internal unless score @s y >= portal_y internal unless score @s y <= portal_y2 internal run scoreboard players set @s in_blue_portal 0
 
 # if enter portal
 ## red
