@@ -6,6 +6,7 @@ scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
 scoreboard objectives add death deathCount
 scoreboard objectives add kill playerKillCount
+scoreboard objectives add gapple minecraft.used:minecraft.golden_apple
 scoreboard objectives add points dummy
 # arrow regen
 scoreboard objectives add arrow_regen dummy
