@@ -39,6 +39,7 @@ execute as @a at @s run playsound entity.arrow.hit_player player @s
 scoreboard players operation time_s_temp internal = time_s internal
 # reset time
 function fm:clock/reset
+scoreboard players set countdown internal 5
 # reset scores
 scoreboard players reset @a in_blue_portal
 scoreboard players reset @a in_red_portal
