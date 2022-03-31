@@ -3,6 +3,10 @@
 ## period: 0 -> 1
 
 
+# build map
+function bridge:game/build/bridge
+function bridge:game/build/map
+
 # reset time
 function fm:clock/reset
 

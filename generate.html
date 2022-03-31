@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://plexion.dev/css/reset.css">
+    <link rel="stylesheet" href="https://plexion.dev/css/style.css">
+
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Bridge Duels generate</title>
+</head>
+<br><label class="over">bridge:game/build/map</label>
+<div id="a"></div>
+<hr>
+<script>
+    $.get( `structures.json`, function( response ) {
+        let data = response;
+
+        // generate first part
+        let text = "";
+        for (let i in data.structures) {
+            let pos;
+            if (data.structures[i].colour == 'red') {
+                pos = '16';
+            } else {
+                pos = '-16';
+            }
+            text = (`${text}<br>execute if score map internal matches ${i} run setblock ${pos} 93 0 structure_block{mirror:"NONE",seed:0L,posX:${data.structures[i].pos[0].x},posY:${data.structures[i].pos[0].y},posZ:${data.structures[i].pos[0].z},sizeX:${data.structures[i].size[0].x},sizeY:${data.structures[i].size[0].y},sizeZ:${data.structures[i].size[0].z},name:"${data.structures[i].id}",rotation:"NONE",mode:"LOAD"}`);
+        }
+        document.getElementById("a").innerHTML = (`${text}`);
+    });
+</script>
