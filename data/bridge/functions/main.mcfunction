@@ -31,6 +31,12 @@ execute unless score period internal matches 1 as @a if score @s death matches 1
 execute as @e[type=item] run data merge entity @s {PickupDelay:0s}
 kill @e[type=arrow]
 
+# give players blocks
+## red
+item replace entity @s[team=red] weapon.offhand with red_concrete{CanPlaceOn:["red_concrete","blue_concrete","white_concrete"]} 64
+## blue
+item replace entity @s[team=blue] weapon.offhand with blue_concrete{CanPlaceOn:["red_concrete","blue_concrete","white_concrete"]} 64
+
 # use bow
 execute if score period internal matches 1..2 if score arrow_regen global matches 1.. as @a[team=!spec] unless entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run function bridge:track/arrow
 # announce

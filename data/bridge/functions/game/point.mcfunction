@@ -20,6 +20,8 @@ fill -30 104 -1 -32 106 1 air
 # world
 scoreboard players set period internal 2
 gamemode adventure @a[team=!spec]
+effect give @a regeneration 1 255 true
+effect give @a saturation 1 255 true
 function bridge:reset/kit
 # teleport
 ## red
