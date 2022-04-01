@@ -25,7 +25,7 @@ scoreboard players set side_blue internal -1
 ## global
 #  y
 scoreboard players set portal_y internal 87
-scoreboard players set portal_y2 internal 89
+scoreboard players set portal_y2 internal 91
 #  z
 scoreboard players set portal_z internal -2
 scoreboard players set portal_z2 internal 2
