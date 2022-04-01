@@ -15,6 +15,9 @@ gamerule doWeatherCycle false
 scoreboard players set arrow_regen global 1
 scoreboard players set arrow_regen_time global 3
 
+# kill below bridge
+scoreboard players set kill_y internal 80
+
 # team sides
 ## red
 scoreboard players set side_red internal 1

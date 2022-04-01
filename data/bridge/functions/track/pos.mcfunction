@@ -5,6 +5,9 @@ execute as @a at @s store result score @s x run data get entity @s Pos[0]
 execute as @a at @s store result score @s y run data get entity @s Pos[1]
 execute as @a at @s store result score @s z run data get entity @s Pos[2]
 
+# kill if under bridge
+execute as @a[team=!spec] if score @s y <= kill_y internal run kill @s
+
 # determine team side
 ## red
 execute as @a if score @s x >= side_red internal run scoreboard players set @s team_side 0
