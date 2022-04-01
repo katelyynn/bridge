@@ -31,7 +31,7 @@ execute unless score period internal matches 1 as @a if score @s death matches 1
 execute as @e[type=item,name="Red Concrete"] run data merge entity @s {Item:{tag:{CanPlaceOn:["red_concrete","blue_concrete","white_concrete"]}}}
 execute as @e[type=item,name="Blue Concrete"] run data merge entity @s {Item:{tag:{CanPlaceOn:["red_concrete","blue_concrete","white_concrete"]}}}
 execute as @e[type=item] run data merge entity @s {PickupDelay:0s}
-kill @e[type=arrow]
+kill @e[type=arrow,nbt={inGround:1b}]
 
 # eat gapple
 execute as @a if score @s gapple matches 1.. run function bridge:track/gapple
