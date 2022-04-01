@@ -2,7 +2,7 @@
 
 
 # track positions
-function bridge:track/pos
+execute if score period internal matches 1 run function bridge:track/pos
 
 # time loop
 execute if score period internal matches 0..2 run function bridge:time
