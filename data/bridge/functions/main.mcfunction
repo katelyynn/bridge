@@ -28,6 +28,8 @@ execute if score period internal matches 1 as @a if score @s death matches 1.. r
 execute unless score period internal matches 1 as @a if score @s death matches 1.. run scoreboard players reset @s death
 
 # pick up items
+execute as @e[type=item,name="Red Concrete"] run data merge entity @s {Item:{tag:{CanPlaceOn:["red_concrete","blue_concrete","white_concrete"]}}}
+execute as @e[type=item,name="Blue Concrete"] run data merge entity @s {Item:{tag:{CanPlaceOn:["red_concrete","blue_concrete","white_concrete"]}}}
 execute as @e[type=item] run data merge entity @s {PickupDelay:0s}
 kill @e[type=arrow]
 
