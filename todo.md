@@ -28,5 +28,5 @@ full map list:
 - [ ] stumped
 - [x] treehouse
 - [ ] tundra
-- [ ] twilight
+- [x] twilight
 - [x] urban

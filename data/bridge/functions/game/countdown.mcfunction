@@ -35,6 +35,8 @@ execute if score map internal matches 0 run spawnpoint @a[team=red] 30 96 0
 execute if score map internal matches 0 run spawnpoint @a[team=blue] -30 96 0
 execute if score map internal matches 1 run spawnpoint @a[team=red] 33 98 0
 execute if score map internal matches 1 run spawnpoint @a[team=blue] -33 98 0
+execute if score map internal matches 2 run spawnpoint @a[team=red] 32 98 0
+execute if score map internal matches 2 run spawnpoint @a[team=blue] -32 98 0
 
 # world
 gamemode adventure @a[team=!spec]
