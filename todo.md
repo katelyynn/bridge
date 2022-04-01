@@ -26,7 +26,7 @@ full map list:
 - [ ] lighthouse
 - [ ] mister cheesy
 - [ ] stumped
-- [ ] treehouse
+- [x] treehouse
 - [ ] tundra
 - [ ] twilight
 - [x] urban

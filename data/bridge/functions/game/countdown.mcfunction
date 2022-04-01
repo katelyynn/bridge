@@ -33,6 +33,8 @@ fill -30 104 -1 -32 106 1 air
 ## generated with generate.html
 execute if score map internal matches 0 run spawnpoint @a[team=red] 30 96 0
 execute if score map internal matches 0 run spawnpoint @a[team=blue] -30 96 0
+execute if score map internal matches 1 run spawnpoint @a[team=red] 33 98 0
+execute if score map internal matches 1 run spawnpoint @a[team=blue] -33 98 0
 
 # world
 gamemode adventure @a[team=!spec]
