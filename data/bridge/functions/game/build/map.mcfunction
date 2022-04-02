@@ -8,7 +8,7 @@ execute if score map internal matches 0 run setblock 16 93 0 structure_block{mir
 execute if score map internal matches 0 run setblock -16 93 0 structure_block{mirror:"NONE",seed:0L,posX:-33,posY:-6,posZ:-14,sizeX:34,sizeY:37,sizeZ:29,name:"bridge:maps/urban_blue",rotation:"NONE",mode:"LOAD"}
 # TreeHouse
 execute if score map internal matches 1 run setblock 16 93 0 structure_block{mirror:"NONE",seed:0L,posX:0,posY:-6,posZ:-10,sizeX:35,sizeY:33,sizeZ:25,name:"bridge:maps/treehouse_red",rotation:"NONE",mode:"LOAD"}
-execute if score map internal matches 1 run setblock -16 93 0 structure_block{mirror:"NONE",seed:0L,posX:-33,posY:-7,posZ:-10,sizeX:32,sizeY:33,sizeZ:25,name:"bridge:maps/treehouse_blue",rotation:"NONE",mode:"LOAD"}
+execute if score map internal matches 1 run setblock -16 93 0 structure_block{mirror:"NONE",seed:0L,posX:-32,posY:-7,posZ:-10,sizeX:32,sizeY:33,sizeZ:25,name:"bridge:maps/treehouse_blue",rotation:"NONE",mode:"LOAD"}
 # Twilight
 execute if score map internal matches 2 run setblock 16 93 0 structure_block{mirror:"NONE",seed:0L,posX:0,posY:-13,posZ:-13,sizeX:25,sizeY:34,sizeZ:41,name:"bridge:maps/twilight_red",rotation:"NONE",mode:"LOAD"}
 execute if score map internal matches 2 run setblock -16 93 0 structure_block{mirror:"NONE",seed:0L,posX:-25,posY:-13,posZ:-13,sizeX:34,sizeY:37,sizeZ:29,name:"bridge:maps/twilight_blue",rotation:"NONE",mode:"LOAD"}
