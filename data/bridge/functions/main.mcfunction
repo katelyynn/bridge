@@ -72,6 +72,7 @@ execute if score period internal matches 1..3 store result bossbar bridge:blue m
 ## 2: game interval countdown (after point)
 
 # set spawnpoints
+setworldspawn 0 93 0
 ## generated with generate.html
 # Urban
 execute if score map internal matches 0 run spawnpoint @a[team=red] 30 96 0
