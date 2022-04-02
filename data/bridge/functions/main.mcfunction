@@ -77,8 +77,8 @@ execute if score period internal matches 1..3 store result bossbar bridge:blue m
 execute if score map internal matches 0 run spawnpoint @a[team=red] 30 96 0
 execute if score map internal matches 0 run spawnpoint @a[team=blue] -30 96 0
 # TreeHouse
-execute if score map internal matches 1 run spawnpoint @a[team=red] 33 99 0
-execute if score map internal matches 1 run spawnpoint @a[team=blue] -33 99 0
+execute if score map internal matches 1 run spawnpoint @a[team=red] 33 100 0
+execute if score map internal matches 1 run spawnpoint @a[team=blue] -33 100 0
 # Twilight
 execute if score map internal matches 2 run spawnpoint @a[team=red] 27 98 0
 execute if score map internal matches 2 run spawnpoint @a[team=blue] -28 98 0
