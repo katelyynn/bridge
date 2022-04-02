@@ -9,6 +9,7 @@ gamerule doMobLoot false
 gamerule doMobSpawning false
 gamerule doDaylightCycle false
 gamerule doWeatherCycle false
+gamerule doTileDrops false
 
 # arrow regenerating
 ## if disabled, bows have infinity
