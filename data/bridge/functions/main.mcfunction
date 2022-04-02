@@ -11,15 +11,6 @@ execute if score period internal matches 0..2 run function bridge:time
 execute if score period internal matches 1 as @a[scores={kill=1..}] at @s run function bridge:track/kill
 execute unless score period internal matches 1 run scoreboard players reset @a kill
 
-# set spawnpoints
-## generated with generate.html
-execute if score map internal matches 0 run spawnpoint @a[team=red] 30 96 0
-execute if score map internal matches 0 run spawnpoint @a[team=blue] -30 96 0
-execute if score map internal matches 1 run spawnpoint @a[team=red] 33 98 0
-execute if score map internal matches 1 run spawnpoint @a[team=blue] -33 98 0
-execute if score map internal matches 2 run spawnpoint @a[team=red] 32 98 0
-execute if score map internal matches 2 run spawnpoint @a[team=blue] -32 98 0
-
 # win checks
 ## red
 execute if score period internal matches 1..2 if score red points >= win_points global run tag @a[team=red] add win
@@ -79,3 +70,15 @@ execute if score period internal matches 1..3 store result bossbar bridge:blue m
 ## 0: game countdown
 ## 1: main game (ongoing)
 ## 2: game interval countdown (after point)
+
+# set spawnpoints
+## generated with generate.html
+# Urban
+execute if score map internal matches 0 run spawnpoint @a[team=red] 30 96 0
+execute if score map internal matches 0 run spawnpoint @a[team=blue] -30 96 0
+# TreeHouse
+execute if score map internal matches 1 run spawnpoint @a[team=red] 33 98 0
+execute if score map internal matches 1 run spawnpoint @a[team=blue] -33 98 0
+# Twilight
+execute if score map internal matches 2 run spawnpoint @a[team=red] 32 98 0
+execute if score map internal matches 2 run spawnpoint @a[team=blue] -32 98 0

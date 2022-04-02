@@ -14,8 +14,11 @@
 <br><label class="over">bridge:game/build/map</label>
 <div id="a"></div>
 <hr>
-<br><label class="over">bridge:game/countdown</label>
+<br><label class="over">bridge:main</label>
 <div id="b"></div>
+<hr>
+<br><label class="over">bridge:game/build/map</label>
+<div id="c"></div>
 <script>
     $.get( `structures.json`, function( response ) {
         let data = response;
@@ -24,7 +27,7 @@
         let text = "";
         for (let i in data.structures) {
             // red
-            text = (`${text}<br>execute if score map internal matches ${i} run setblock 16 93 0 structure_block{mirror:"NONE",seed:0L,posX:${data.structures[i].pos[0].x},posY:${data.structures[i].pos[0].y},posZ:${data.structures[i].pos[0].z},sizeX:${data.structures[i].size[0].x},sizeY:${data.structures[i].size[0].y},sizeZ:${data.structures[i].size[0].z},name:"${data.structures[i].id}_red",rotation:"NONE",mode:"LOAD"}`);
+            text = (`${text}<br># ${data.structures[i].name}<br>execute if score map internal matches ${i} run setblock 16 93 0 structure_block{mirror:"NONE",seed:0L,posX:${data.structures[i].pos[0].x},posY:${data.structures[i].pos[0].y},posZ:${data.structures[i].pos[0].z},sizeX:${data.structures[i].size[0].x},sizeY:${data.structures[i].size[0].y},sizeZ:${data.structures[i].size[0].z},name:"${data.structures[i].id}_red",rotation:"NONE",mode:"LOAD"}`);
             // blue
             text = (`${text}<br>execute if score map internal matches ${i} run setblock -16 93 0 structure_block{mirror:"NONE",seed:0L,posX:${data.structures[i].pos[1].x},posY:${data.structures[i].pos[1].y},posZ:${data.structures[i].pos[0].z},sizeX:${data.structures[i].size[1].x},sizeY:${data.structures[i].size[1].y},sizeZ:${data.structures[i].size[1].z},name:"${data.structures[i].id}_blue",rotation:"NONE",mode:"LOAD"}`);
         }
@@ -34,10 +37,37 @@
         let text2 = "";
         for (let i in data.structures) {
             // red
-            text2 = (`${text2}<br>execute if score map internal matches ${i} run spawnpoint @a[team=red] ${data.structures[i].spawn[0].x} ${data.structures[i].spawn[0].y} ${data.structures[i].spawn[0].z}`);
+            text2 = (`${text2}<br># ${data.structures[i].name}<br>execute if score map internal matches ${i} run spawnpoint @a[team=red] ${data.structures[i].spawn[0].x} ${data.structures[i].spawn[0].y} ${data.structures[i].spawn[0].z}`);
             // blue
             text2 = (`${text2}<br>execute if score map internal matches ${i} run spawnpoint @a[team=blue] ${data.structures[i].spawn[1].x} ${data.structures[i].spawn[1].y} ${data.structures[i].spawn[1].z}`);
         }
         document.getElementById("b").innerHTML = (`${text2}`);
+
+        // generate third part
+        let text3 = "";
+        for (let i in data.structures) {
+            // red
+            // x
+            text3 = (`${text3}<br># ${data.structures[i].name}<br>execute if score map internal matches ${i} run scoreboard players set portal_red_x internal ${data.structures[i].portal[0].x}`);
+            // x2
+            text3 = (`${text3}<br>execute if score map internal matches ${i} run scoreboard players set portal_red_x2 internal ${data.structures[i].portal[0].x2}`);
+
+            // blue 
+            // x
+            text3 = (`${text3}<br>execute if score map internal matches ${i} run scoreboard players set portal_blue_x internal ${data.structures[i].portal[1].x}`);
+            // x2
+            text3 = (`${text3}<br>execute if score map internal matches ${i} run scoreboard players set portal_blue_x2 internal ${data.structures[i].portal[1].x2}`);
+
+            // global
+            // y
+            text3 = (`${text3}<br>execute if score map internal matches ${i} run scoreboard players set portal_y internal ${data.structures[i].portal[2].y}`);
+            // y2
+            text3 = (`${text3}<br>execute if score map internal matches ${i} run scoreboard players set portal_y2 internal ${data.structures[i].portal[2].y2}`);
+            // z
+            text3 = (`${text3}<br>execute if score map internal matches ${i} run scoreboard players set portal_z internal ${data.structures[i].portal[2].z}`);
+            // z2
+            text3 = (`${text3}<br>execute if score map internal matches ${i} run scoreboard players set portal_z2 internal ${data.structures[i].portal[2].z2}`);
+        }
+        document.getElementById("c").innerHTML = (`${text3}`);
     });
 </script>
