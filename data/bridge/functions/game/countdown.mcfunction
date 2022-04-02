@@ -29,15 +29,6 @@ fill 30 104 -1 32 106 1 air
 fill -29 103 -2 -33 107 2 blue_stained_glass
 fill -30 104 -1 -32 106 1 air
 
-# set spawnpoints
-## generated with generate.html
-execute if score map internal matches 0 run spawnpoint @a[team=red] 30 96 0
-execute if score map internal matches 0 run spawnpoint @a[team=blue] -30 96 0
-execute if score map internal matches 1 run spawnpoint @a[team=red] 33 98 0
-execute if score map internal matches 1 run spawnpoint @a[team=blue] -33 98 0
-execute if score map internal matches 2 run spawnpoint @a[team=red] 32 98 0
-execute if score map internal matches 2 run spawnpoint @a[team=blue] -32 98 0
-
 # world
 gamemode adventure @a[team=!spec]
 effect clear @a
