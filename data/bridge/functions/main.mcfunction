@@ -73,10 +73,10 @@ execute if score period internal matches 1..3 store result bossbar bridge:blue m
 
 # clear illegal blocks
 ## x
-fill 20 110 8 -20 84 6 air replace #concrete
-fill 20 110 -8 -20 84 -6 air replace #concrete
+fill 20 110 8 -20 84 6 air replace #bridge:concrete
+fill 20 110 -8 -20 84 -6 air replace #bridge:concrete
 ## y
-fill 20 100 8 -20 105 -8 air replace #concrete
+fill 20 100 8 -20 105 -8 air replace #bridge:concrete
 
 # set spawnpoints
 setworldspawn 0 93 0
